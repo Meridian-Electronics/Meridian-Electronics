@@ -3,339 +3,336 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meridian Electronics — Documented Dev Modules & Kits</title>
-<meta name="description" content="Meridian Electronics builds documented, tested developer modules and kits for the ICs that power modern hardware. No knockoffs, no mystery boards — just clean layouts and real documentation. Based in Connecticut.">
-
+<title>Meridian Electronics — Developer Modules &amp; Kits</title>
+<meta name="description" content="Meridian Electronics builds developer modules and kits for the ICs that power modern hardware. Documented, tested, and built for hobbyists and innovators alike.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ============ NAV ============ -->
 <header class="site-header">
-  <nav class="nav">
-    <a href="index.html" class="brand" aria-label="Meridian Electronics home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">MERIDIAN<span>·</span>ELECTRONICS</span>
+  <div class="header-inner">
+    <a href="#top" class="wordmark">
+      <span class="wordmark-mark">M&Eacute;</span>
+      <span class="wordmark-text">Meridian Electronics</span>
     </a>
-    <div class="nav-links">
-      <a href="#about">Who We Are</a>
+
+    <nav class="main-nav" id="main-nav">
       <a href="#products">Products</a>
-      <a href="#storefronts">Shop</a>
-      <a href="#updates">Updates</a>
+      <a href="#datasheets">Datasheets</a>
+      <a href="#about">About</a>
       <a href="#policies">Shipping</a>
-    </div>
-    <a href="#storefronts" class="nav-cta">Shop Now</a>
-  </nav>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule" aria-hidden="true"><span class="signal-dot"></span></div>
 </header>
 
-<main>
+<main id="top">
 
-  <!-- HERO — datasheet cover block -->
+  <!-- ============ HERO ============ -->
   <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-inner">
-      <div class="datasheet-block">
-        <div class="row1">
-          <span>DOC: MERIDIAN-HOME-001</span>
-          <span class="rev">● IN PRODUCTION</span>
-        </div>
-        <span class="eyebrow">Small-batch hardware, Connecticut, USA</span>
-        <h1>Developer modules built like they should have been <em>all along.</em></h1>
-        <p class="desc">Meridian Electronics builds developer modules and kits for the ICs that power modern hardware — from ADCs to flash memory, oscillators, USB modules and more. Every board is designed for quality: clean layouts, real documentation, top-of-the-line chips.</p>
-        <div class="hero-actions">
-          <a href="#storefronts" class="btn btn-primary">Browse the shops →</a>
-          <a href="#about" class="btn btn-ghost">Who We Are</a>
-        </div>
-      </div>
-    </div>
-    <div class="spec-strip">
-      <div class="wrap">
-        <div class="spec-item">
-          <div class="k">Based In</div>
-          <div class="v">West Hartford, CT</div>
-        </div>
-        <div class="spec-item">
-          <div class="k">Ships Via</div>
-          <div class="v">USPS · Domestic + Intl</div>
-        </div>
-        <div class="spec-item">
-          <div class="k">Lead Time</div>
-          <div class="v">3–5 Business Days</div>
-        </div>
-        <div class="spec-item">
-          <div class="k">Custom Orders</div>
-          <div class="v">Encouraged</div>
-        </div>
+      <p class="eyebrow mono">CT, USA &nbsp;·&nbsp; SMALL-BATCH ELECTRONICS</p>
+      <h1 class="hero-title">They do the hard&nbsp;stuff.<br>We do the tedious&nbsp;stuff.</h1>
+      <p class="hero-sub">
+        Meridian Electronics builds developer modules and kits for the ICs that power modern
+        hardware — ADCs, flash memory, oscillators, USB modules, and more. Clean layouts,
+        real documentation, top-of-the-line chips. No unlabeled boards. No mystery pinouts.
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">See the modules</a>
+        <a href="#datasheets" class="btn btn-ghost">Browse datasheets</a>
       </div>
     </div>
   </section>
 
-  <!-- WHO WE ARE -->
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="section-label">// 01 — About</span>
-          <h2>Who We Are</h2>
-        </div>
-        <p class="tag">A small electronics company built to remove the tedious part of hardware development.</p>
-      </div>
+  <div class="trace-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 H520 L560 4 H1200" /><circle cx="560" cy="4" r="4"/></svg>
+  </div>
 
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>We are a small electronics company out of Connecticut, and our goal is simple. We understand all the challenges that come from <strong>cheap knockoff chips, unlabeled breakout boards, and modules with no documentation.</strong> We want to get rid of all of those challenges, with high-quality, easy-to-understand, documented, tested, impeccable products.</p>
-
-          <div class="pull-quote">
-            Why should an inventor spend days, even weeks, finding out how to build a USB-C host, when we can do that for them? They do the hard stuff. We do the tedious stuff.
-          </div>
-
-          <p>We are built for hobbyists and innovators alike. Every module ships with a real datasheet — pinouts, example code, debugging notes, the works — because a board without documentation is just a mystery you paid for.</p>
-
-          <p>Thank you for shopping Meridian Electronics.</p>
-        </div>
-
-        <div class="value-list">
-          <div class="value-row">
-            <span class="num">01</span>
-            <div>
-              <h3>Real Documentation</h3>
-              <p>Every product ships with pinouts, example code, and debugging notes — not a bare board and a prayer.</p>
-            </div>
-          </div>
-          <div class="value-row">
-            <span class="num">02</span>
-            <div>
-              <h3>Tested, Not Assumed</h3>
-              <p>Boards are built, tested, and verified on the bench before they're ever listed.</p>
-            </div>
-          </div>
-          <div class="value-row">
-            <span class="num">03</span>
-            <div>
-              <h3>Top-Shelf Chips</h3>
-              <p>No unmarked knockoffs. What's on the silkscreen is what's actually on the board.</p>
-            </div>
-          </div>
-          <div class="value-row">
-            <span class="num">04</span>
-            <div>
-              <h3>Custom Orders Welcome</h3>
-              <p>Got a weird one-off need? We don't just accept custom orders — we encourage them.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- ============ WHY / MANIFESTO ============ -->
+  <section class="manifesto" id="why">
+    <div class="section-inner narrow">
+      <p class="section-tag mono">// WHY WE BUILD</p>
+      <p class="manifesto-text">
+        We understand the challenges that come from cheap knockoff chips, unlabeled breakout
+        boards, and modules with zero documentation. We want to get rid of all of that —
+        with high quality, easy to understand, documented, tested, impeccable products.
+        Why should an inventor spend days, even weeks, figuring out how to build a USB-C host,
+        when we can do that for them? Built for hobbyists and innovators alike.
+      </p>
+      <p class="manifesto-sign mono">— Meridian Electronics, West Hartford, CT</p>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <div class="trace-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 4 H420 L460 20 H1200" /><circle cx="460" cy="20" r="4"/></svg>
+  </div>
+
+  <!-- ============ PRODUCTS ============ -->
   <section class="products" id="products">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="section-label">// 02 — Catalog</span>
-          <h2>Current Lineup</h2>
-        </div>
-        <p class="tag">Four boards, in production now. More in the pipeline.</p>
-      </div>
+    <div class="section-inner">
+      <p class="section-tag mono">// CURRENT LINEUP</p>
+      <h2 class="section-title">Four boards. Zero guesswork.</h2>
+      <p class="section-lede">
+        Every module ships with pinouts, example code, and notes on how to actually use it —
+        not just a chip glued to a PCB.
+      </p>
 
       <div class="product-grid">
 
+        <!-- PRODUCT 1 -->
         <article class="product-card">
-          <div class="pc-top">
-            <span class="part-no">ATMEGA328P-KIT</span>
-            <span class="status-dot" aria-hidden="true"></span>
+          <div class="product-tag mono">U1</div>
+          <div class="product-media">
+            <!-- TODO: replace with real product photo -->
+            <span class="media-placeholder mono">USB-C BREAKOUT<br>photo goes here</span>
           </div>
-          <div class="icon-slot">[ product photo ]</div>
+          <h3>USB-C Breakout</h3>
+          <p class="product-blurb">
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            Plug-and-play USB-C breakout with built-in ESD protection and CC resistors
+            already done for you. Bring power and data out cleanly, no guessing on pull-downs.
+          </p>
+          <ul class="product-specs mono">
+            <li>ESD protected</li>
+            <li>CC resistors on-board</li>
+            <li>Solder-pad breakout</li>
+          </ul>
+          <div class="product-links">
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
+          </div>
+        </article>
+
+        <!-- PRODUCT 2 -->
+        <article class="product-card">
+          <div class="product-tag mono">U2</div>
+          <div class="product-media">
+            <!-- TODO: replace with real product photo -->
+            <span class="media-placeholder mono">MICRO USB-B BREAKOUT<br>photo goes here</span>
+          </div>
+          <h3>Micro USB-B Breakout</h3>
+          <p class="product-blurb">
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            A dependable micro USB-B breakout with ESD protection, an on-board power switch,
+            and proper decoupling caps. The boring stuff, handled.
+          </p>
+          <ul class="product-specs mono">
+            <li>ESD protected</li>
+            <li>On-board power switch</li>
+            <li>Decoupling caps included</li>
+          </ul>
+          <div class="product-links">
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
+          </div>
+        </article>
+
+        <!-- PRODUCT 3 -->
+        <article class="product-card">
+          <div class="product-tag mono">U3</div>
+          <div class="product-media">
+            <!-- TODO: replace with real product photo -->
+            <span class="media-placeholder mono">DAC BREAKOUT (MCP4725)<br>photo goes here</span>
+          </div>
+          <h3>DAC Breakout — MCP4725</h3>
+          <p class="product-blurb">
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            12-bit I2C DAC breakout built around the MCP4725. Ships with 1&micro;F and 100nF
+            caps on VDD and a power-good LED, so you can skip straight to generating signal.
+          </p>
+          <ul class="product-specs mono">
+            <li>12-bit, I2C</li>
+            <li>Power-good LED</li>
+            <li>3.3V / 5V typical</li>
+          </ul>
+          <div class="product-links">
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
+          </div>
+        </article>
+
+        <!-- PRODUCT 4 -->
+        <article class="product-card">
+          <div class="product-tag mono">U4</div>
+          <div class="product-media">
+            <!-- TODO: replace with real product photo -->
+            <span class="media-placeholder mono">ATMEGA328P BREADBOARD KIT<br>photo goes here</span>
+          </div>
           <h3>ATMEGA328P Breadboard Kit</h3>
-          <p>A full bare-metal MCU dev kit — chip, passives, LDO, optional RP2040 UART programmer. Built for the true hobbyist who wants the real thing, not an Arduino shield.</p>
-          <a href="#storefronts" class="pc-link">View in shop →</a>
-        </article>
-
-        <article class="product-card">
-          <div class="pc-top">
-            <span class="part-no">MCP4725-DAC</span>
-            <span class="status-dot" aria-hidden="true"></span>
+          <p class="product-blurb">
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            Everything you need to build your own MCU on a breadboard — ATMEGA328P, LDO,
+            timer, memory, resistors, caps, ESD protection, and an optional RP2040 programmer
+            for USB-C&nbsp;&gt; UART programming.
+          </p>
+          <ul class="product-specs mono">
+            <li>18 parts (+1 optional)</li>
+            <li>Pre-burned bootloader</li>
+            <li>Optional RP2040 programmer</li>
+          </ul>
+          <div class="product-links">
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
           </div>
-          <div class="icon-slot">[ product photo ]</div>
-          <h3>12-Bit DAC Breakout Module</h3>
-          <p>MCP4725-based I2C DAC breakout with clean power filtering and a power-good LED. Streamlines precision voltage generation and waveform work.</p>
-          <a href="#storefronts" class="pc-link">View in shop →</a>
-        </article>
-
-        <article class="product-card">
-          <div class="pc-top">
-            <span class="part-no">USB-C-HOST</span>
-            <span class="status-dot" aria-hidden="true"></span>
-          </div>
-          <div class="icon-slot">[ product photo ]</div>
-          <h3>USB-C Module</h3>
-          <p>A documented USB-C host module — the tedious part of the build, already solved, so you can get on with the actual invention.</p>
-          <a href="#storefronts" class="pc-link">View in shop →</a>
-        </article>
-
-        <article class="product-card">
-          <div class="pc-top">
-            <span class="part-no">MICRO-USB-B</span>
-            <span class="status-dot" aria-hidden="true"></span>
-          </div>
-          <div class="icon-slot">[ product photo ]</div>
-          <h3>Micro USB-B Module</h3>
-          <p>A clean, reliable micro USB-B breakout for projects that still need it — documented and tested like everything else on the bench.</p>
-          <a href="#storefronts" class="pc-link">View in shop →</a>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- STOREFRONTS -->
-  <section class="storefronts" id="storefronts">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="section-label">// 03 — Shop</span>
-          <h2>Where to Buy</h2>
-        </div>
-        <p class="tag">We list across a few storefronts — pick whichever you already use.</p>
-      </div>
+  <div class="trace-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 H680 L720 36 H1200" /><circle cx="720" cy="36" r="4"/></svg>
+  </div>
 
-      <div class="storefront-grid">
-        <a href="#" class="storefront-card">
-          <span class="sf-name">Tindie</span>
-          <p>Our original storefront — full catalog and listings history.</p>
-          <span class="sf-go">Shop on Tindie →</span>
-        </a>
-        <a href="#" class="storefront-card">
-          <span class="sf-name">Smallrun</span>
-          <p>Small-batch listings with our full "Who We Are" story front and center.</p>
-          <span class="sf-go">Shop on Smallrun →</span>
-        </a>
-        <a href="#" class="storefront-card">
-          <span class="sf-name">Lectronz</span>
-          <p>Ships from West Hartford, CT — tracked domestic and international.</p>
-          <span class="sf-go">Shop on Lectronz →</span>
-        </a>
-      </div>
+  <!-- ============ DATASHEETS ============ -->
+  <section class="datasheets" id="datasheets">
+    <div class="section-inner">
+      <p class="section-tag mono">// DOCUMENTATION</p>
+      <h2 class="section-title">Real documentation, every board.</h2>
+      <p class="section-lede">
+        Pinouts, example code, and debugging notes — not a stock photo and a shrug.
+        Drop your PDFs in <code class="mono">/assets/datasheets</code> and link them below.
+      </p>
+
+      <ul class="datasheet-list">
+        <li>
+          <span class="ds-name">USB-C Breakout — Datasheet</span>
+          <a href="assets/datasheets/usb-c-breakout.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
+        </li>
+        <li>
+          <span class="ds-name">Micro USB-B Breakout — Datasheet</span>
+          <a href="assets/datasheets/micro-usb-b-breakout.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
+        </li>
+        <li>
+          <span class="ds-name">DAC Breakout (MCP4725) — Datasheet</span>
+          <a href="assets/datasheets/dac-breakout.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
+        </li>
+        <li>
+          <span class="ds-name">ATMEGA328P Breadboard Kit — Datasheet</span>
+          <a href="assets/datasheets/atmega328p-kit.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- UPDATES / LOG -->
-  <section class="updates" id="updates">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="section-label">// 04 — Log</span>
-          <h2>Latest Builds</h2>
-        </div>
-        <p class="tag">New creations, revisions, and notes from the bench.</p>
-      </div>
+  <div class="trace-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 4 H320 L360 20 H1200" /><circle cx="360" cy="20" r="4"/></svg>
+  </div>
 
-      <div class="log-list">
-        <article class="log-entry">
-          <span class="log-date">PLACEHOLDER</span>
-          <div>
-            <h3>Post title goes here</h3>
-            <p>Short update text goes here — swap in real project logs, new listings, or revision notes as they happen.</p>
-            <span class="log-tag">NEW LISTING</span>
-          </div>
-        </article>
-        <article class="log-entry">
-          <span class="log-date">PLACEHOLDER</span>
-          <div>
-            <h3>Post title goes here</h3>
-            <p>Short update text goes here — swap in real project logs, new listings, or revision notes as they happen.</p>
-            <span class="log-tag">REVISION</span>
-          </div>
-        </article>
-        <article class="log-entry">
-          <span class="log-date">PLACEHOLDER</span>
-          <div>
-            <h3>Post title goes here</h3>
-            <p>Short update text goes here — swap in real project logs, new listings, or revision notes as they happen.</p>
-            <span class="log-tag">NOTE</span>
-          </div>
-        </article>
-      </div>
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner narrow">
+      <p class="section-tag mono">// WHO WE ARE</p>
+      <h2 class="section-title">A small shop out of Connecticut.</h2>
+      <p class="about-text">
+        Meridian Electronics is a small electronics company based out of West Hartford,
+        Connecticut. We design and build developer modules and kits for the chips that
+        power modern hardware — the parts every project needs but nobody wants to spend
+        a weekend figuring out. Every board we ship is designed for quality: clean layouts,
+        real documentation, and top-of-the-line chips.
+      </p>
+      <p class="about-text">
+        We're built for hobbyists and innovators alike, and we take custom orders — in
+        fact, we encourage them. If you're working on something and need a board that
+        doesn't exist yet, that's exactly the kind of tedious problem we like solving.
+      </p>
     </div>
   </section>
 
-  <!-- POLICIES -->
+  <div class="trace-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 H840 L880 4 H1200" /><circle cx="880" cy="4" r="4"/></svg>
+  </div>
+
+  <!-- ============ SHIPPING / POLICIES ============ -->
   <section class="policies" id="policies">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="section-label">// 05 — Shipping</span>
-          <h2>Shop Policies</h2>
-        </div>
-      </div>
+    <div class="section-inner">
+      <p class="section-tag mono">// SHOP POLICIES</p>
+      <h2 class="section-title">Shipping &amp; orders</h2>
 
       <div class="policy-grid">
         <div class="policy-card">
-          <div class="p-icon">[ USPS ]</div>
-          <h3>Domestic & International</h3>
-          <p>We ship via USPS domestically and internationally. International shipments include tracking codes.</p>
+          <h3 class="mono">ORIGIN</h3>
+          <p>Shipped from West Hartford, Connecticut, USA via USPS.</p>
         </div>
         <div class="policy-card">
-          <div class="p-icon">[ TIME ]</div>
-          <h3>3–5 Day Lead Time</h3>
-          <p>Items ship 3–5 business days after order. Domestic delivery typically takes 2–5 business days after that via Standard Ground.</p>
+          <h3 class="mono">DOMESTIC</h3>
+          <p>Orders ship 3–5 business days after purchase. Standard Ground typically
+            delivers in 2–5 business days.</p>
         </div>
         <div class="policy-card">
-          <div class="p-icon">[ CUSTOM ]</div>
-          <h3>Custom Orders</h3>
-          <p>We not only accept custom orders — we encourage them. Have a weird spec in mind? Reach out.</p>
+          <h3 class="mono">INTERNATIONAL</h3>
+          <p>Shipped with tracking. Standard International typically takes 1–4 weeks.
+            Import duties, VAT, or other fees may apply on delivery and are separate
+            from shipping cost.</p>
+        </div>
+        <div class="policy-card">
+          <h3 class="mono">CUSTOM ORDERS</h3>
+          <p>We not only accept custom orders — we encourage them. Reach out below
+            if you need something built.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="wrap">
-      <span class="eyebrow">Get in touch</span>
-      <h2>Building something that needs a documented board?</h2>
-      <p>Tell us what you're working on — custom orders, questions about a kit, or bulk requests are all welcome.</p>
-      <div class="cta-buttons">
-        <a href="mailto:hello@meridianelectronics.example" class="btn btn-primary">Email Us →</a>
-        <a href="#storefronts" class="btn btn-ghost">Browse Products</a>
+  <div class="trace-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 4 H580 L620 20 H1200" /><circle cx="620" cy="20" r="4"/></svg>
+  </div>
+
+  <!-- ============ CONTACT / SHOPS ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner narrow center">
+      <p class="section-tag mono">// FIND US</p>
+      <h2 class="section-title">Shop &amp; contact</h2>
+      <p class="section-lede">
+        Product listings, pricing, and photos live on our storefronts. Datasheets and
+        the full story live here.
+      </p>
+
+      <div class="shop-buttons">
+        <!-- TODO: replace # with your real storefront URLs -->
+        <a href="#" class="shop-btn">
+          <span class="mono">Tindie</span>
+        </a>
+        <a href="#" class="shop-btn">
+          <span class="mono">Smallrun</span>
+        </a>
+        <a href="#" class="shop-btn">
+          <span class="mono">Lectronz</span>
+        </a>
       </div>
+
+      <!-- TODO: replace with your real contact email -->
+      <p class="contact-email">
+        Questions, custom builds, or wholesale &mdash;
+        <a href="mailto:hello@meridianelectronics.example">hello@meridianelectronics.example</a>
+      </p>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="brand" style="font-size:0.95rem;">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-name">MERIDIAN<span>·</span>ELECTRONICS</span>
-        </span>
-        <p>Documented developer modules and kits for the ICs that power modern hardware. Built for hobbyists and innovators alike. West Hartford, CT.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <a href="#storefronts">Tindie</a>
-        <a href="#storefronts">Smallrun</a>
-        <a href="#storefronts">Lectronz</a>
-      </div>
-      <div class="footer-col">
-        <h4>Site</h4>
-        <a href="#about">Who We Are</a>
-        <a href="#products">Products</a>
-        <a href="#updates">Updates</a>
-        <a href="#policies">Shipping</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Meridian Electronics · West Hartford, CT</span>
-      <span>MERIDIAN-SITE-REV-001</span>
-    </div>
+  <div class="footer-inner">
+    <span class="mono">MERIDIAN ELECTRONICS &copy; <span id="year"></span></span>
+    <span class="mono footer-loc">WEST HARTFORD, CT</span>
   </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
