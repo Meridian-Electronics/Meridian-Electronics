@@ -1,0 +1,751 @@
+/* ============================================
+   Meridian Electronics — Design Tokens
+   ============================================ */
+:root {
+  --pcb-black: #0f1f17;
+  --pcb-dark: #14261c;
+  --slate: #3a4a42;
+  --slate-light: #5c6d64;
+  --silk: #ede9df;
+  --silk-dim: #b8b6ac;
+  --copper: #c87a3d;
+  --copper-bright: #e0904f;
+  --signal-green: #5fb88a;
+  --signal-green-dim: #3d7d5c;
+  --warn-red: #b8564a;
+
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --sans: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+
+  --border-hairline: 1px solid rgba(237, 233, 223, 0.14);
+  --border-copper: 1px solid rgba(200, 122, 61, 0.4);
+
+  --max-width: 1180px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--pcb-black);
+  color: var(--silk);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ============================================
+   Utility / labels
+   ============================================ */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--signal-green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--signal-green);
+  flex-shrink: 0;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--slate-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   Header / Nav
+   ============================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 31, 23, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: var(--border-hairline);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--copper);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.brand-mark::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--copper);
+  border-radius: 1px;
+}
+
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px solid transparent;
+  border-top-color: rgba(200,122,61,0.35);
+  border-right-color: rgba(200,122,61,0.35);
+}
+
+.brand-name { color: var(--silk); }
+.brand-name span { color: var(--copper); }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+}
+
+.nav-links a {
+  color: var(--silk-dim);
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible { color: var(--copper-bright); }
+
+.nav-links a:focus-visible { outline: 1px dashed var(--copper); outline-offset: 4px; }
+
+.nav-cta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  border: var(--border-copper);
+  color: var(--copper-bright);
+  padding: 8px 16px;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-cta:hover { background: var(--copper); color: var(--pcb-black); }
+
+.nav-toggle { display: none; }
+
+/* ============================================
+   Hero — "Datasheet cover" signature
+   ============================================ */
+.hero {
+  position: relative;
+  border-bottom: var(--border-hairline);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(237,233,223,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237,233,223,0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse 80% 60% at 60% 20%, black 20%, transparent 75%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  padding: 120px 32px 90px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.datasheet-block {
+  border: var(--border-hairline);
+  border-left: 3px solid var(--copper);
+  background: rgba(20, 38, 28, 0.5);
+  padding: 28px 32px;
+  max-width: 720px;
+}
+
+.datasheet-block .row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.datasheet-block .row1 .rev { color: var(--signal-green); }
+
+.hero h1 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--copper-bright);
+}
+
+.hero p.desc {
+  font-size: 1.05rem;
+  color: var(--silk-dim);
+  max-width: 58ch;
+  margin-bottom: 26px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  padding: 13px 24px;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--copper);
+  color: var(--pcb-black);
+  font-weight: 600;
+  border: 1px solid var(--copper);
+}
+
+.btn-primary:hover { background: var(--copper-bright); border-color: var(--copper-bright); }
+
+.btn-ghost {
+  border: var(--border-hairline);
+  color: var(--silk);
+}
+
+.btn-ghost:hover { border-color: var(--copper); color: var(--copper-bright); }
+
+.btn:focus-visible { outline: 2px dashed var(--copper); outline-offset: 3px; }
+
+/* spec strip under hero */
+.spec-strip {
+  border-top: var(--border-hairline);
+  background: var(--pcb-dark);
+}
+
+.spec-strip .wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.spec-item {
+  padding: 22px 24px;
+  border-right: var(--border-hairline);
+}
+
+.spec-item:last-child { border-right: none; }
+
+.spec-item .k {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--slate-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.spec-item .v {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--signal-green);
+}
+
+/* ============================================
+   Section shell
+   ============================================ */
+section { padding: 88px 0; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 44px;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-bottom: var(--border-hairline);
+  padding-bottom: 24px;
+}
+
+.section-head h2 {
+  font-family: var(--sans);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.section-head .tag {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--slate-light);
+  max-width: 40ch;
+  text-align: right;
+}
+
+/* ============================================
+   Who We Are
+   ============================================ */
+.about {
+  border-bottom: var(--border-hairline);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-copy p {
+  color: var(--silk-dim);
+  margin-bottom: 20px;
+  font-size: 1.02rem;
+  max-width: 62ch;
+}
+
+.about-copy strong { color: var(--silk); font-weight: 600; }
+
+.pull-quote {
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--silk);
+  border-left: 3px solid var(--copper);
+  padding-left: 22px;
+  margin: 30px 0;
+  line-height: 1.45;
+}
+
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: var(--border-hairline);
+}
+
+.value-row {
+  display: flex;
+  gap: 18px;
+  padding: 22px 24px;
+  border-bottom: var(--border-hairline);
+}
+
+.value-row:last-child { border-bottom: none; }
+
+.value-row .num {
+  font-family: var(--mono);
+  color: var(--copper);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.value-row h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.value-row p {
+  color: var(--silk-dim);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Products
+   ============================================ */
+.products { border-bottom: var(--border-hairline); }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(237,233,223,0.14);
+  border: var(--border-hairline);
+}
+
+.product-card {
+  background: var(--pcb-black);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  transition: background 0.25s ease;
+}
+
+.product-card:hover { background: var(--pcb-dark); }
+
+.product-card .pc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.product-card .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal-green);
+  box-shadow: 0 0 6px var(--signal-green);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.product-card .part-no {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--slate-light);
+  letter-spacing: 0.06em;
+}
+
+.product-card .icon-slot {
+  width: 100%;
+  aspect-ratio: 1.4;
+  border: 1px dashed rgba(237,233,223,0.18);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--slate-light);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 10px;
+  background: rgba(237,233,223,0.02);
+}
+
+.product-card h3 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.product-card p {
+  color: var(--silk-dim);
+  font-size: 0.85rem;
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+
+.product-card .pc-link {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--copper);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.product-card .pc-link:hover { gap: 10px; color: var(--copper-bright); }
+.product-card .pc-link:focus-visible { outline: 1px dashed var(--copper); outline-offset: 3px; }
+
+/* ============================================
+   Storefronts strip
+   ============================================ */
+.storefronts {
+  border-bottom: var(--border-hairline);
+  background: var(--pcb-dark);
+}
+
+.storefront-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.storefront-card {
+  border: var(--border-hairline);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.storefront-card:hover {
+  border-color: var(--copper);
+  transform: translateY(-2px);
+}
+
+.storefront-card .sf-name {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--silk);
+}
+
+.storefront-card p {
+  color: var(--silk-dim);
+  font-size: 0.88rem;
+  flex-grow: 1;
+}
+
+.storefront-card .sf-go {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--copper-bright);
+}
+
+/* ============================================
+   Updates / Log
+   ============================================ */
+.updates { border-bottom: var(--border-hairline); }
+
+.log-list { border-top: var(--border-hairline); }
+
+.log-entry {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: var(--border-hairline);
+}
+
+.log-entry .log-date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--copper);
+  padding-top: 3px;
+}
+
+.log-entry h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.log-entry p {
+  color: var(--silk-dim);
+  font-size: 0.92rem;
+  max-width: 68ch;
+}
+
+.log-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--signal-green);
+  border: 1px solid rgba(95,184,138,0.3);
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-top: 10px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================
+   Shop Policies
+   ============================================ */
+.policies { border-bottom: var(--border-hairline); }
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(237,233,223,0.14);
+  border: var(--border-hairline);
+}
+
+.policy-card {
+  background: var(--pcb-black);
+  padding: 26px;
+}
+
+.policy-card .p-icon {
+  font-family: var(--mono);
+  color: var(--copper);
+  font-size: 0.75rem;
+  margin-bottom: 14px;
+  letter-spacing: 0.06em;
+}
+
+.policy-card h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.policy-card p {
+  color: var(--silk-dim);
+  font-size: 0.88rem;
+}
+
+/* ============================================
+   Contact / CTA
+   ============================================ */
+.cta-section {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta-section .eyebrow { justify-content: center; margin-bottom: 20px; }
+
+.cta-section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cta-section p {
+  color: var(--silk-dim);
+  max-width: 50ch;
+  margin: 0 auto 34px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+  border-top: var(--border-hairline);
+  padding: 50px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand p {
+  color: var(--silk-dim);
+  font-size: 0.88rem;
+  max-width: 40ch;
+  margin-top: 14px;
+}
+
+.footer-col h4 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.footer-col a, .footer-col p {
+  display: block;
+  color: var(--silk-dim);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover { color: var(--copper-bright); }
+.footer-col a:focus-visible { outline: 1px dashed var(--copper); outline-offset: 3px; }
+
+.footer-bottom {
+  border-top: var(--border-hairline);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--slate-light);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 980px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .storefront-grid { grid-template-columns: 1fr; }
+  .policy-grid { grid-template-columns: 1fr; }
+  .spec-strip .wrap { grid-template-columns: repeat(2, 1fr); }
+  .spec-item:nth-child(2) { border-right: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .hero-inner { padding: 80px 20px 60px; }
+  .wrap { padding: 0 20px; }
+  .product-grid { grid-template-columns: 1fr; }
+  .datasheet-block { padding: 22px 20px; }
+  .log-entry { grid-template-columns: 1fr; gap: 8px; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+  .section-head .tag { text-align: left; }
+}
