@@ -572,6 +572,18 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
 }
 
+.footer-social {
+  display: flex;
+  gap: 18px;
+}
+.footer-social a {
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+.footer-social a:hover {
+  color: var(--copper);
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
