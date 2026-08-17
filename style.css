@@ -115,7 +115,7 @@ img { max-width: 100%; display: block; }
   gap: 10px;
 }
 
-.wordmark-mark {
+.wordmark img {
   height: 30px;
   width: 30px;
   object-fit: contain;
