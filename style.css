@@ -116,14 +116,9 @@ img { max-width: 100%; display: block; }
 }
 
 .wordmark-mark {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--paper);
-  background: var(--green);
-  padding: 4px 6px;
-  border-radius: 2px;
-  letter-spacing: 0.04em;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
 }
 
 .wordmark-text {
