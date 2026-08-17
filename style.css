@@ -116,8 +116,8 @@ img { max-width: 100%; display: block; }
 }
 
 .wordmark-mark {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   object-fit: contain;
 }
 
