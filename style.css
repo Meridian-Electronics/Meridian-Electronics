@@ -1,10 +1,3 @@
-/* ==========================================================================
-   Meridian Electronics — design tokens
-   Palette pulled from the physical product: FR4 paper, soldermask green,
-   copper trace/pad tone. Type: Space Grotesk (display), IBM Plex Sans (body),
-   IBM Plex Mono (pin tables, designators, data — same register as the datasheets).
-   ========================================================================== */
-
 :root {
   --paper: #FAF9F5;
   --paper-dim: #F1EFE6;
