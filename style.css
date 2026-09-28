@@ -1,3 +1,10 @@
+/* ==========================================================================
+   Meridian Electronics — design tokens
+   Palette pulled from the physical product: FR4 paper, soldermask green,
+   copper trace/pad tone. Type: Space Grotesk (display), IBM Plex Sans (body),
+   IBM Plex Mono (pin tables, designators, data — same register as the datasheets).
+   ========================================================================== */
+
 :root {
   --paper: #FAF9F5;
   --paper-dim: #F1EFE6;
@@ -109,9 +116,14 @@ img { max-width: 100%; display: block; }
 }
 
 .wordmark-mark {
-  height: 40px;
-  width: 40px;
-  object-fit: contain;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--paper);
+  background: var(--green);
+  padding: 4px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
 }
 
 .wordmark-text {
@@ -369,7 +381,7 @@ img { max-width: 100%; display: block; }
 }
 
 .product-media {
-  height: 360px;
+  height: 160px;
   border-radius: 2px;
   background:
     repeating-linear-gradient(45deg, var(--paper-dim), var(--paper-dim) 8px, var(--paper) 8px, var(--paper) 16px);
@@ -385,13 +397,6 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
   font-size: 0.72rem;
   line-height: 1.6;
-}
-
-.product-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2px;
 }
 
 .product-card h3 {
@@ -567,18 +572,6 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
 }
 
-.footer-social {
-  display: flex;
-  gap: 18px;
-}
-.footer-social a {
-  color: var(--ink-soft);
-  transition: color 0.15s ease;
-}
-.footer-social a:hover {
-  color: var(--copper);
-}
-
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -588,7 +581,7 @@ img { max-width: 100%; display: block; }
   .policy-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 840px) {
   .main-nav {
     position: absolute;
     top: 100%;
@@ -611,4 +604,197 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 540px) {
   .policy-grid { grid-template-columns: 1fr; }
+}
+
+/* ========================================================================
+   Custom solder stencil quote page
+   ======================================================================== */
+
+.stencil-hero {
+  background: var(--paper-dim);
+}
+
+.stencil-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.stencil-copy {
+  padding-top: 22px;
+}
+
+.stencil-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.7rem);
+  line-height: 1.08;
+  margin: 0 0 22px;
+}
+
+.stencil-intro {
+  max-width: 540px;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  margin: 0 0 30px;
+}
+
+.stencil-pricing {
+  border-top: 1px solid var(--line);
+  max-width: 500px;
+}
+
+.stencil-price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.stencil-price-row strong {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.stencil-note {
+  max-width: 500px;
+  margin: 20px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.quote-tool {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--green);
+  padding: 30px;
+}
+
+.quote-tool h2 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  margin: 0 0 6px;
+}
+
+.quote-subtitle {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 24px;
+}
+
+.quote-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.quote-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quote-field-wide {
+  grid-column: 1 / -1;
+}
+
+.quote-field label {
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+
+.quote-field input,
+.quote-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  padding: 10px 11px;
+}
+
+.quote-field input:focus,
+.quote-field textarea:focus {
+  border-color: var(--green);
+  outline: 2px solid rgba(27, 67, 50, 0.16);
+}
+
+.quote-field textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.quote-help {
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.quote-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 22px 0 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.quote-total span {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.quote-total output {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.quote-submit {
+  width: 100%;
+  cursor: pointer;
+}
+
+.quote-disclaimer {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  margin: 13px 0 0;
+}
+
+.quote-response {
+  margin-top: 18px;
+  padding: 14px;
+  background: var(--paper-dim);
+  border-left: 3px solid var(--copper);
+  font-size: 0.88rem;
+}
+
+.quote-response p { margin: 0 0 8px; }
+.quote-response a { color: var(--green); font-weight: 600; text-decoration: underline; }
+
+.stencil-next-step {
+  border-top: 1px solid var(--line);
+}
+
+.stencil-next-step p {
+  max-width: 700px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .stencil-layout { grid-template-columns: 1fr; gap: 38px; }
+  .stencil-copy { padding-top: 0; }
+}
+
+@media (max-width: 540px) {
+  .quote-tool { padding: 22px 18px; }
+  .quote-fields { grid-template-columns: 1fr; }
+  .quote-field-wide { grid-column: auto; }
 }
