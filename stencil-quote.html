@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Solder Stencils — Meridian Electronics</title>
+<meta name="description" content="Get a quick estimate for custom solder stencils from Meridian Electronics. Two stencils included with a $5 starting fee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html#top" class="wordmark">
+      <span class="wordmark-mark">M&Eacute;</span>
+      <span class="wordmark-text">Meridian Electronics</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#datasheets">Datasheets</a>
+      <a href="stencil-quote.html" aria-current="page">Custom stencils</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#policies">Shipping</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="header-rule" aria-hidden="true"><span class="signal-dot"></span></div>
+</header>
+
+<main class="stencil-page">
+  <section class="stencil-hero">
+    <div class="section-inner stencil-layout">
+      <div class="stencil-copy">
+        <p class="section-tag mono">// CUSTOM PCB SERVICE</p>
+        <h1 class="stencil-title">Custom solder stencils, made for your board.</h1>
+        <p class="stencil-intro">
+          Get a matched pair of solder-paste stencils for your next assembly run.
+          Share your board dimensions and design files to get a confirmed quote.
+        </p>
+
+        <div class="stencil-pricing" aria-label="Stencil pricing">
+          <div class="stencil-price-row">
+            <span>Starting fee</span>
+            <strong>$5.00</strong>
+          </div>
+          <div class="stencil-price-row">
+            <span>Included</span>
+            <strong>2 stencils</strong>
+          </div>
+          <div class="stencil-price-row">
+            <span>Area rate</span>
+            <strong>$0.05 / cm2</strong>
+          </div>
+        </div>
+        <p class="stencil-note">
+          Estimate assumes the area rate applies to the total area of all stencils,
+          in addition to the starting fee. Final pricing is confirmed after file review.
+        </p>
+      </div>
+
+      <section class="quote-tool" aria-labelledby="quote-title">
+        <h2 id="quote-title">Get a quote</h2>
+        <p class="quote-subtitle">Start with an estimate; we’ll confirm details by email.</p>
+
+        <form id="quote-form">
+          <div class="quote-fields">
+            <div class="quote-field">
+              <label for="stencil-width">Board width (cm)</label>
+              <input id="stencil-width" name="width" type="number" min="0.1" step="0.1" value="5" required>
+            </div>
+            <div class="quote-field">
+              <label for="stencil-height">Board height (cm)</label>
+              <input id="stencil-height" name="height" type="number" min="0.1" step="0.1" value="5" required>
+            </div>
+            <div class="quote-field quote-field-wide">
+              <label for="stencil-quantity">Number of stencils</label>
+              <input id="stencil-quantity" name="quantity" type="number" min="2" step="1" value="2" required>
+              <span class="quote-help">The $5 starting fee includes the first two stencils.</span>
+            </div>
+            <div class="quote-field">
+              <label for="quote-name">Your name</label>
+              <input id="quote-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="quote-field">
+              <label for="quote-email">Email</label>
+              <input id="quote-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="quote-field quote-field-wide">
+              <label for="quote-notes">Project notes <span class="quote-help">(optional)</span></label>
+              <textarea id="quote-notes" name="notes" placeholder="Anything we should know about your board?"></textarea>
+            </div>
+          </div>
+
+          <div class="quote-total" aria-live="polite">
+            <span>Estimated total · <span id="stencil-area">50.0 cm2</span></span>
+            <output id="estimate-total" for="stencil-width stencil-height stencil-quantity">$7.50</output>
+          </div>
+          <button class="btn btn-primary quote-submit" type="submit">Prepare quote request</button>
+          <p class="quote-disclaimer">Estimate only. Please attach your Gerber or paste-layer file to the email so we can review it.</p>
+          <div id="quote-response" class="quote-response" role="status" hidden></div>
+        </form>
+      </section>
+    </div>
+  </section>
+
+  <section class="stencil-next-step">
+    <div class="section-inner">
+      <p class="section-tag mono">// WHAT TO SEND</p>
+      <h2 class="section-title">A quick file review makes the quote real.</h2>
+      <p>
+        Include your board’s solder-paste layer or Gerber files with the email draft.
+        We’ll check the design, confirm the final price, and follow up before anything is made.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="mono">MERIDIAN ELECTRONICS &copy; <span id="year"></span></span>
+    <span class="mono footer-loc">WEST HARTFORD, CT</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
