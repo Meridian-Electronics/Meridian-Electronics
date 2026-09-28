@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDZ7LK2J1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0KDZ7LK2J1');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meridian Electronics — Developer Modules &amp; Kits</title>
 <meta name="description" content="Meridian Electronics builds developer modules and kits for the ICs that power modern hardware. Documented, tested, and built for hobbyists and innovators alike.">
 
-<link rel="canonical" href="https://meridian-electronics.github.io/Meridian-Electronics/">
+<!-- TODO: replace with your real GitHub Pages / custom domain URL once live -->
+<link rel="canonical" href="https://yourusername.github.io/meridian-electronics-site/">
 
 <!-- Social share preview (Reddit, X, Discord, iMessage, etc.) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Meridian Electronics — Developer Modules & Kits">
 <meta property="og:description" content="Documented, tested developer modules and kits for the ICs that power modern hardware. Built for hobbyists and innovators, out of Connecticut.">
+<!-- TODO: replace with a real 1200x630 image once you have product photos -->
 <meta property="og:image" content="assets/images/social-preview.png">
-<meta property="og:url" content="https://meridian-electronics.github.io/Meridian-Electronics/">
+<meta property="og:url" content="https://yourusername.github.io/meridian-electronics-site/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Meridian Electronics — Developer Modules & Kits">
 <meta name="twitter:description" content="Documented, tested developer modules and kits for the ICs that power modern hardware.">
@@ -39,15 +33,15 @@
 <!-- ============ NAV ============ -->
 <header class="site-header">
   <div class="header-inner">
-    
-  <a href="#top" class="wordmark">
-  <img src="assets/images/logo-icon.png" alt="Meridian Electronics" class="wordmark-mark">
-  <span class="wordmark-text">Meridian Electronics</span>
-  </a>
+    <a href="#top" class="wordmark">
+      <span class="wordmark-mark">M&Eacute;</span>
+      <span class="wordmark-text">Meridian Electronics</span>
+    </a>
 
     <nav class="main-nav" id="main-nav">
       <a href="#products">Products</a>
       <a href="#datasheets">Datasheets</a>
+      <a href="stencil-quote.html">Custom stencils</a>
       <a href="#about">About</a>
       <a href="#policies">Shipping</a>
       <a href="#contact">Contact</a>
@@ -67,11 +61,11 @@
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-inner">
       <p class="eyebrow mono">CT, USA &nbsp;·&nbsp; SMALL-BATCH ELECTRONICS</p>
-      <h1 class="hero-title">You do the important&nbsp;stuff.<br>We do the tedious&nbsp;stuff.</h1>
+      <h1 class="hero-title">They do the hard&nbsp;stuff.<br>We do the tedious&nbsp;stuff.</h1>
       <p class="hero-sub">
         Meridian Electronics builds developer modules and kits for the ICs that power modern
-        hardware. From ADCs to flash memory, oscillators, USB modules, and more. Clean layouts,
-        real documentation and top-of-the-line chips ensure quality results. No unlabeled boards. No mystery pinouts.
+        hardware — ADCs, flash memory, oscillators, USB modules, and more. Clean layouts,
+        real documentation, top-of-the-line chips. No unlabeled boards. No mystery pinouts.
       </p>
       <div class="hero-actions">
         <a href="#products" class="btn btn-primary">See the modules</a>
@@ -87,15 +81,14 @@
   <!-- ============ WHY / MANIFESTO ============ -->
   <section class="manifesto" id="why">
     <div class="section-inner narrow">
-      <p class="section-tag mono">WHY WE BUILD</p>
+      <p class="section-tag mono">// WHY WE BUILD</p>
       <p class="manifesto-text">
-        We understand the challenges that come from cheap knockoff chips, unlabeled breakout
-        boards, and modules with zero documentation. We want to get rid of all of that —
-        with high quality, easy to understand, documented, tested, impeccable products.
-        Why should an inventor spend days, even weeks, figuring out how to build a USB-C host,
-        when we can do that for them? Built by hobbyists, for hobbyists.
+        Cheap knockoff chips, unlabeled boards, and missing documentation waste time that
+        should be spent building. We make thoughtfully designed modules and kits with clear
+        instructions, tested layouts, and reliable components — so makers can get to the
+        interesting part sooner.
       </p>
-      <p class="manifesto-sign mono">— Meridian Electronics, USA</p>
+      <p class="manifesto-sign mono">— Meridian Electronics, West Hartford, CT</p>
     </div>
   </section>
 
@@ -106,8 +99,8 @@
   <!-- ============ PRODUCTS ============ -->
   <section class="products" id="products">
     <div class="section-inner">
-      <p class="section-tag mono">CURRENT LINEUP</p>
-      <h2 class="section-title">Four boards. Zero guesswork.</h2>
+      <p class="section-tag mono">// CURRENT LINEUP</p>
+      <h2 class="section-title">Four products. Zero guesswork.</h2>
       <p class="section-lede">
         Every module ships with pinouts, example code, and notes on how to actually use it —
         not just a chip glued to a PCB.
@@ -120,144 +113,102 @@
           <div class="product-tag mono">U1</div>
           <div class="product-media">
             <!-- TODO: replace with real product photo -->
-            <img src="assets/images/USB-C IMG.png" alt="USB-C breakout board">
+            <span class="media-placeholder mono">USB-C BREAKOUT<br>photo goes here</span>
           </div>
           <h3>USB-C Breakout</h3>
           <p class="product-blurb">
             <!-- TODO: replace with your real Tindie/Smallrun description -->
-            This USB-C Breakout Module features pin headers for VDD (pin 1 & 6), GND (pin 2 & 5), and the differential data pairs (D- pin 3, D+ pin 4). The module is hard wired with 5.1k CC resistors, configuring it as a 5v slave. The module features comprehensive ESD protections, including diodes on VBUS and data pairs, a polyfuse and a 10uF capacitor.
+            Plug-and-play USB-C breakout with built-in ESD protection and CC resistors
+            already done for you. Bring power and data out cleanly, no guessing on pull-downs.
           </p>
           <ul class="product-specs mono">
             <li>ESD protected</li>
             <li>CC resistors on-board</li>
-            <li>Pin breakouts</li>
+            <li>Solder-pad breakout</li>
           </ul>
           <div class="product-links">
-            <a href="https://www.tindie.com/products/meridian_tech/usb-c-breakout-module-built-in-esd-plug-play/" class="shop-link">Tindie</a>
-            <a href="https://smallrun.net/shop/meridian-electronics/usb-c-breakout-module-built-in-esd-plug-play" class="shop-link">Smallrun</a>
-            <a href="https://lectronz.com/products/usb-c-breakout-module" class="shop-link">Lectronz</a>
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
           </div>
         </article>
 
-        <!-- PRODUCT 1.1 -->
+        <!-- PRODUCT 2 -->
         <article class="product-card">
           <div class="product-tag mono">U2</div>
           <div class="product-media">
             <!-- TODO: replace with real product photo -->
-            <img src="assets/images/USB-A IMG.png" alt="USB-A breakout board">
-          </div>
-          <h3>USB-A Breakout</h3>
-          <p class="product-blurb">
-            <!-- TODO: replace with your real Tindie/Smallrun description -->
-            This USB-A Breakout Module features pin headers for VDD, GND, and the differential data pairs. The module is configured as a host, your board supplies the +5v. The module features an AP2171W power switch for USB VBUS. The module features comprehensive ESD protections, including diodes on data pairs along with decoupling capacitors & the power switch.          </p>
-          <ul class="product-specs mono">
-            <li>ESD protected</li>
-            <li>On-board power switch</li>
-            <li>Pin breakouts</li>
-          </ul>
-          <div class="product-links">
-            <a href="https://www.tindie.com/products/meridian_tech/usb-c-usb-a-module-kit-plug-play-esd/" class="shop-link">Tindie</a>
-            <a href="https://smallrun.net/shop/meridian-electronics/usb-a-module" class="shop-link">Smallrun</a>
-            <a href="https://lectronz.com/products/usb-a-breakout" class="shop-link">Lectronz</a>
-          </div>
-        </article>
-        
-        <!-- PRODUCT 2 -->
-        <article class="product-card">
-          <div class="product-tag mono">U3</div>
-          <div class="product-media">
-            <!-- TODO: replace with real product photo -->
-            <img src="assets/images/USB-B IMG.png" alt="USB-B breakout board">
+            <span class="media-placeholder mono">MICRO USB-B BREAKOUT<br>photo goes here</span>
           </div>
           <h3>Micro USB-B Breakout</h3>
           <p class="product-blurb">
-            This USB-B Breakout Module features pin headers for VDD (pin 4), GND (pin 1 & 5), and the differential data pairs (D- pin 2, D+ pin 3). The module includes a AP2171W power switch, configuring it as a 5v host. The module features comprehensive ESD protections, including diodes on VBUS and data pairs, a 10uF capacitor, and the power switch.
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            A dependable micro USB-B breakout with ESD protection, an on-board power switch,
+            and proper decoupling caps. The boring stuff, handled.
           </p>
           <ul class="product-specs mono">
             <li>ESD protected</li>
             <li>On-board power switch</li>
-            <li>Pin breakouts</li>
+            <li>Decoupling caps included</li>
           </ul>
           <div class="product-links">
-            <a href="https://www.tindie.com/products/meridian_tech/micro-usb-b-breakout-module/" class="shop-link">Tindie</a>
-            <a href="https://smallrun.net/shop/meridian-electronics/micro-usb-b-breakout-module" class="shop-link">Smallrun</a>
-            <a href="https://lectronz.com/stores/meridian-electronics" class="shop-link">Lectronz</a>
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
           </div>
         </article>
 
         <!-- PRODUCT 3 -->
         <article class="product-card">
-          <div class="product-tag mono">U4</div>
+          <div class="product-tag mono">U3</div>
           <div class="product-media">
             <!-- TODO: replace with real product photo -->
-            <img src="assets/images/DAC IMG.png" alt="DAC breakout board">
+            <span class="media-placeholder mono">DAC BREAKOUT (MCP4725)<br>photo goes here</span>
           </div>
           <h3>DAC Breakout — MCP4725</h3>
           <p class="product-blurb">
-            This DAC Breakout Module breaks out GND (pin 1), VDD (pin 5), I2C (SCL & SDA on pins 2 and pin 3 respectfully) & output voltage (pin 4). This board features the 12 bit MCP4725 series typically operating on 3.3v or 5v. This module features 1uF & 100nF capacitors on VDD, and an LED indicating good power.
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            12-bit I2C DAC breakout built around the MCP4725. Ships with 1&micro;F and 100nF
+            caps on VDD and a power-good LED, so you can skip straight to generating signal.
           </p>
           <ul class="product-specs mono">
             <li>12-bit, I2C</li>
-            <li>Pin Breakouts</li>
-            <li>3.3V-5V typically</li>
+            <li>Power-good LED</li>
+            <li>3.3V / 5V typical</li>
           </ul>
           <div class="product-links">
-            <a href="https://www.tindie.com/products/meridian_tech/12-bit-dac-mcp4725-module/" class="shop-link">Tindie</a>
-            <a href="https://smallrun.net/shop/meridian-electronics/12-bit-dac-mcp4725-module" class="shop-link">Smallrun</a>
-            <a href="https://lectronz.com/stores/meridian-electronics" class="shop-link">Lectronz</a>
-            <a href="https://www.ebay.com/itm/366663452091" class="shop-link">Ebay</a>
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
           </div>
         </article>
 
         <!-- PRODUCT 4 -->
         <article class="product-card">
-          <div class="product-tag mono">U5</div>
+          <div class="product-tag mono">U4</div>
           <div class="product-media">
             <!-- TODO: replace with real product photo -->
-            <img src="assets/images/ATMEGA328P IMG.png" alt="328P kit">
+            <span class="media-placeholder mono">ATMEGA328P BREADBOARD KIT<br>photo goes here</span>
           </div>
           <h3>ATMEGA328P Breadboard Kit</h3>
           <p class="product-blurb">
-            This ATMEGA328 Developer Kit & Datasheet has everything you need to build your very own MCU on a breadboard/protoboard. This kit contains one ATMEGA328P, capacitors, resistors, leds, LDO voltage regulator, ESD protections, memory, a programmable timer, switches & optionally an rp2040 for seamless UART programming.
-            If you choose to include the RP2040 as the programmer, you get built-in USB-C > UART programming and a serial monitor for all your debugging needs. You may also opt for the classic USB to serial adapter, featuring chips such as the CH340. 
+            <!-- TODO: replace with your real Tindie/Smallrun description -->
+            Everything you need to build your own MCU on a breadboard — ATMEGA328P, LDO,
+            timer, memory, resistors, caps, ESD protection, and an optional RP2040 programmer
+            for USB-C&nbsp;&gt; UART programming.
           </p>
           <ul class="product-specs mono">
-            <li>18 components (+1 programmer)</li>
+            <li>18 parts (+1 optional)</li>
             <li>Pre-burned bootloader</li>
-            <li>Breadboard & Protoboard friendly</li>
+            <li>Optional RP2040 programmer</li>
           </ul>
           <div class="product-links">
-            <a href="https://www.tindie.com/products/meridian_tech/atmega328p-dev-educational-kit-breadboard-mcp/" class="shop-link">Tindie</a>
-            <a href="https://smallrun.net/shop/meridian-electronics/atmega328p-dev-kit-educational-kit-breadboard" class="shop-link">Smallrun</a>
-            <a href="https://lectronz.com/products/atmega328p-devkit" class="shop-link">Lectronz</a>
-            <a href="https://www.ebay.com/itm/366651396255" class="shop-link">Ebay</a>
+            <a href="#" class="shop-link">Tindie</a>
+            <a href="#" class="shop-link">Smallrun</a>
+            <a href="#" class="shop-link">Lectronz</a>
           </div>
         </article>
 
-        <!-- PRODUCT 4.1 -->
-        <article class="product-card">
-          <div class="product-tag mono">U6</div>
-          <div class="product-media">
-            <!-- TODO: replace with real product photo -->
-            <img src="assets/images/ATMEGA4809 IMG.png" alt="4809 kit">
-          </div>
-          <h3>ATMEGA4809 Breadboard Kit</h3>
-          <p class="product-blurb">
-            This ATMEGA4809 Developer Kit & Datasheet has everything you need to build your very own MCU on a breadboard/protoboard. This kit contains one ATMEGA4809, capacitors, resistors, leds, LDO voltage regulator, ESD protections, memory, a programmable timer, switches & optionally an RP2040 for seamless UART programming.
-            If you choose to include the RP2040 as the programmer, you get built-in USB-C > UART programming and a serial monitor for all your debugging needs. You may also opt for the classic USB to serial adapter, featuring chips such as the CH340. 
-          </p>
-          <ul class="product-specs mono">
-            <li>18 components (+1 programmer)</li>
-            <li>Pre-burned bootloader</li>
-            <li>Breadboard & Protoboard friendly</li>
-          </ul>
-          <div class="product-links">
-            <a href="https://www.tindie.com/products/meridian_tech/atmega4809-dev-educational-kit-breadboard-mcp/" class="shop-link">Tindie</a>
-            <a href="https://smallrun.net/shop/meridian-electronics/atmega4809-dev-educational-kit-breadboard-mcp" class="shop-link">Smallrun</a>
-            <a href="https://lectronz.com/products/atmega4809-dev-educational-kit-breadboard-mcp" class="shop-link">Lectronz</a>
-            <a href="https://www.ebay.com/itm/366666823416" class="shop-link">Ebay</a>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -269,20 +220,17 @@
   <!-- ============ DATASHEETS ============ -->
   <section class="datasheets" id="datasheets">
     <div class="section-inner">
-      <p class="section-tag mono">DOCUMENTATION</p>
+      <p class="section-tag mono">// DOCUMENTATION</p>
       <h2 class="section-title">Real documentation, every board.</h2>
       <p class="section-lede">
         Pinouts, example code, and debugging notes — not a stock photo and a shrug.
+        Drop your PDFs in <code class="mono">/assets/datasheets</code> and link them below.
       </p>
 
       <ul class="datasheet-list">
         <li>
           <span class="ds-name">USB-C Breakout — Datasheet</span>
           <a href="assets/datasheets/usb-c-breakout.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
-        </li>
-        <li>
-          <span class="ds-name">USB-A Breakout — Datasheet</span>
-          <a href="assets/datasheets/usb-a-breakout.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
         </li>
         <li>
           <span class="ds-name">Micro USB-B Breakout — Datasheet</span>
@@ -296,10 +244,6 @@
           <span class="ds-name">ATMEGA328P Breadboard Kit — Datasheet</span>
           <a href="assets/datasheets/atmega328p-kit.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
         </li>
-        <li>
-          <span class="ds-name">ATMEGA4809 Breadboard Kit — Datasheet</span>
-          <a href="assets/datasheets/atmega4809-kit.pdf" class="ds-link mono">DOWNLOAD PDF &rarr;</a>
-        </li>
       </ul>
     </div>
   </section>
@@ -311,19 +255,16 @@
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
     <div class="section-inner narrow">
-      <p class="section-tag mono">WHO WE ARE</p>
-      <h2 class="section-title">A shop built by hobbyists for hobbyists.</h2>
+      <p class="section-tag mono">// WHO WE ARE</p>
+      <h2 class="section-title">A small shop out of Connecticut.</h2>
       <p class="about-text">
-        Meridian Electronics is a small electronics company based out of
-        Connecticut. We design and build developer modules and kits for the chips that
-        power modern hardware — the parts every project needs but nobody wants to spend
-        a weekend figuring out. Every board we ship is designed for quality: clean layouts,
-        real documentation, and top-of-the-line chips.
+        Meridian Electronics is a small electronics company based in West Hartford,
+        Connecticut. We design and build developer modules and kits for the chips behind
+        modern hardware, making useful components easier to put to work.
       </p>
       <p class="about-text">
-        We're built for hobbyists and innovators alike, and we take custom orders — in
-        fact, we encourage them. If you're working on something and need a board that
-        doesn't exist yet, that's exactly the kind of tedious problem we like solving.
+        Have a project that needs a board or stencil that doesn't exist yet? We take custom
+        orders and like solving exactly those kinds of problems.
       </p>
     </div>
   </section>
@@ -335,13 +276,13 @@
   <!-- ============ SHIPPING / POLICIES ============ -->
   <section class="policies" id="policies">
     <div class="section-inner">
-      <p class="section-tag mono">SHOP POLICIES</p>
+      <p class="section-tag mono">// SHOP POLICIES</p>
       <h2 class="section-title">Shipping &amp; orders</h2>
 
       <div class="policy-grid">
         <div class="policy-card">
           <h3 class="mono">ORIGIN</h3>
-          <p>Shipped from Connecticut, USA via USPS.</p>
+          <p>Shipped from West Hartford, Connecticut, USA via USPS.</p>
         </div>
         <div class="policy-card">
           <h3 class="mono">DOMESTIC</h3>
@@ -370,7 +311,7 @@
   <!-- ============ CONTACT / SHOPS ============ -->
   <section class="contact" id="contact">
     <div class="section-inner narrow center">
-      <p class="section-tag mono">FIND US</p>
+      <p class="section-tag mono">// FIND US</p>
       <h2 class="section-title">Shop &amp; contact</h2>
       <p class="section-lede">
         Product listings, pricing, and photos live on our storefronts. Datasheets and
@@ -379,13 +320,13 @@
 
       <div class="shop-buttons">
         <!-- TODO: replace # with your real storefront URLs -->
-        <a href="https://www.tindie.com/stores/meridian_tech/" class="shop-btn">>
+        <a href="#" class="shop-btn">
           <span class="mono">Tindie</span>
         </a>
-        <a href="https://smallrun.net/shop/meridian-electronics" class="shop-btn">
+        <a href="#" class="shop-btn">
           <span class="mono">Smallrun</span>
         </a>
-        <a href="https://lectronz.com/stores/meridian-electronics" class="shop-btn">
+        <a href="#" class="shop-btn">
           <span class="mono">Lectronz</span>
         </a>
       </div>
@@ -393,7 +334,7 @@
       <!-- TODO: replace with your real contact email -->
       <p class="contact-email">
         Questions, custom builds, or wholesale &mdash;
-        <a href="mailto:10matthew.robinson@gmail.com">10matthew.robinson@gmail.com</a>
+        <a href="mailto:hello@meridianelectronics.example">hello@meridianelectronics.example</a>
       </p>
     </div>
   </section>
@@ -403,13 +344,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <span class="mono">MERIDIAN ELECTRONICS &copy; <span id="year"></span></span>
-    <div class="footer-social">
-      <a href="https://bsky.app/profile/meridian-tech.bsky.social" class="mono">Bluesky</a>
-      <a href="https://x.com/Meridian_TechUS" class="mono">X</a>
-      <a href="https://www.reddit.com/user/Federal-Estate-7800/" class="mono">Reddit</a>
-      <a href="https://github.com/Meridian-Electronics" class="mono">GitHub</a>
-    </div>
-    <span class="mono footer-loc">Connecticut, USA</span>
+    <span class="mono footer-loc">WEST HARTFORD, CT</span>
   </div>
 </footer>
 
